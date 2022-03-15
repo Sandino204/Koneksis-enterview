@@ -9,12 +9,12 @@
         "development": {
             "name": "koneksys-interview-development",
             "user": "ec2-user",
-            "host": "ec2-54-147-128-163.compute-1.amazonaws.com",
-            "key": "./Koneksys.pem",
+            "host": "ec2-34-226-155-18.compute-1.amazonaws.com",
+            "key": "./KoneksysDevelopment.pem",
             "ref": "origin/development",
             "repo": "https://Sandino204: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@github.com/Sandino204/Koneksis-enterview.git",
-            "path": "/home/ec2-user/koneksysDevelopment",
-            "pre-setup": "rm -r /home/ec2-user/koneksysDevelopment",
+            "path": "/home/ec2-user/koneksys",
+            "pre-setup": "rm -r /home/ec2-user/koneksys",
             "post-deploy":
             "npm install && npm run build  && pm2 startOrRestart ecosystem.json"
         },
