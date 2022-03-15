@@ -40,7 +40,7 @@ pipelines:
         - step: 
             name: Enter on EC2
             script:
-              - ssh -i Koneksys.pem ec2-user@54.147.128.163
+              - ssh -i 
               - pm2 stop koneksys-interview-development
 
     start_development:
@@ -53,7 +53,7 @@ pipelines:
         - step: 
             name: Enter on EC2
             script:
-              - ssh -i Koneksys.pem ec2-user@54.147.128.163
+              - ssh -i 
               - pm2 startOrRestart koneksys-interview-development
 
     stop_production:
@@ -66,7 +66,7 @@ pipelines:
         - step: 
             name: Enter on EC2
             script:
-              - ssh -i Koneksys.pem ec2-user@54.147.128.163
+              - ssh -i 
               - pm2 startOrRestart koneksys-interview
 
     start_production:
@@ -79,7 +79,7 @@ pipelines:
         - step: 
             name: Enter on EC2
             script:
-              - ssh -i Koneksys.pem ec2-user@54.147.128.163
+              - ssh -i 
               - pm2 start koneksys-interview
 
   branches:
