@@ -2,7 +2,7 @@
     "apps": [
         {
             "name": "koneksys-interview",
-            "script": "node ./dist/main.js"
+            "script": "npm start:prod"
         }
     ],
     "deploy": {
