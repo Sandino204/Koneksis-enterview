@@ -13,7 +13,7 @@
             "ref": "origin/development",
             "repo": "https://github.com/Sandino204/Koneksis-enterview.git",
             "path": "/var/www/koneksysDevelopment",
-            "pre-deploy": "if [ ! -d /var/www/koneksysDevelopment] then cd  /var/www && mkdir -p /koneksysDevelopment",
+            "pre-deploy": "if [ ! -d /var/www/koneksysDevelopment] then cd  /var/www && mkdir -p /koneksysDevelopment/current",
             "post-deploy":
             "npm install && npm run build  && pm2 startOrRestart ecosystem.json"
         },
