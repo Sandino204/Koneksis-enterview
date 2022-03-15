@@ -1,0 +1,30 @@
+{
+    "apps": [
+        {
+            "name": "koneksys-enterview",
+            "script": "node ./dist/main.js"
+        }
+    ],
+    "deploy": {
+        "development": {
+            "user": "ec2-user",
+            "host": "172.31.26.96",
+            "key": "./ssh/KoneksysDevelopment.pem",
+            "ref": "origin/development",
+            "repo": "git@bitbucket.org:Sandino204/koneksys-interview.git",
+            "path": "/home/ubuntu/koneksys",
+            "post-deploy":
+            "npm install && npm run build  && pm2 startOrRestart ecosystem.config.json"
+        },
+        "production": {
+            "user": "ec2-user",
+            "host": "172.31.26.96",
+            "key": "./ssh/Koneksys.pem",
+            "ref": "origin/main",
+            "repo": "git@bitbucket.org:Sandino204/koneksys-interview.git",
+            "path": "/home/ubuntu/koneksys",
+            "post-deploy":
+            "npm install && npm run build  && pm2 startOrRestart ecosystem.config.json"
+        }
+    }
+}
