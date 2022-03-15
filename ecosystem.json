@@ -13,7 +13,7 @@
             "ref": "origin/development",
             "repo": "https://github.com/Sandino204/Koneksis-enterview.git",
             "path": "/var/www/koneksys",
-            "pre-setup": "apt-get install git ; ls -la",
+            "pre-deploy-local": "[! -d /var/www/koneksysDevelopment] && cd  /var/www && mkdir -p /koneksysDevelopment",
             "post-deploy":
             "npm install && npm run build  && pm2 startOrRestart ecosystem.json"
         },
@@ -24,7 +24,7 @@
             "ref": "origin/main",
             "repo": "https://github.com/Sandino204/Koneksis-enterview.git",
             "path": "/var/www/koneksys",
-            "pre-setup": "apt-get install git ; ls -la",
+            "pre-deploy-local": "[! -d /var/www/koneksys] && cd  /var/www && mkdir -p /koneksys",
             "post-deploy":
             "npm install && npm run build  && pm2 startOrRestart ecosystem.json"
         }
