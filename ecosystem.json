@@ -1,12 +1,17 @@
 {
     "apps": [
         {
+            "name": "koneksys-interview-development",
+            "script": "node ./dist/main.js"
+        },
+        {
             "name": "koneksys-interview",
             "script": "node ./dist/main.js"
         }
     ],
     "deploy": {
         "development": {
+            "name": "koneksys-interview-development",
             "user": "ec2-user",
             "host": "ec2-54-147-128-163.compute-1.amazonaws.com",
             "key": "./Koneksys.pem",
@@ -18,6 +23,7 @@
             "npm install && npm run build  && pm2 startOrRestart ecosystem.json"
         },
         "production": {
+            "name": "koneksys-interview",
             "user": "ec2-user",
             "host": "ec2-54-147-128-163.compute-1.amazonaws.com",
             "key": "./Koneksys.pem",
