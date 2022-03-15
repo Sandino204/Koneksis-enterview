@@ -13,7 +13,7 @@
             "ref": "origin/development",
             "repo": "https://github.com/Sandino204/Koneksis-enterview.git",
             "path": "/home/koneksysDevelopment",
-            "pre-deploy": "cd /home && mkdir /koneksysDevelopment",
+            "pre-deploy": "cd /home && sudo mkdir /koneksysDevelopment",
             "post-deploy":
             "npm install && npm run build  && pm2 startOrRestart ecosystem.json"
         },
@@ -24,7 +24,7 @@
             "ref": "origin/main",
             "repo": "https://github.com/Sandino204/Koneksis-enterview.git",
             "path": "/home/koneksys",
-            "pre-deploy": "cd /home && mkdir /koneksysDevelopment",
+            "pre-deploy": "cd /home && sudo mkdir /koneksys",
             "post-deploy":
             "npm install && npm run build  && pm2 startOrRestart ecosystem.json"
         }
