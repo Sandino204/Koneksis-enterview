@@ -12,7 +12,7 @@
             "key": "./Koneksys.pem",
             "ref": "origin/development",
             "repo": "https://github.com/Sandino204/Koneksis-enterview.git",
-            "path": "~/var/www/koneksysDevelopment",
+            "path": "./var/www/koneksysDevelopment",
             "pre-setup": "apt-get install git ; ls -la",
             "post-deploy":
             "npm install && npm run build  && pm2 startOrRestart ecosystem.json"
@@ -23,7 +23,7 @@
             "key": "./Koneksys.pem",
             "ref": "origin/main",
             "repo": "https://github.com/Sandino204/Koneksis-enterview.git",
-            "path": "~/var/www/koneksys",
+            "path": "./var/www/koneksys",
             "pre-setup": "apt-get install git ; ls -la",
             "post-deploy":
             "npm install && npm run build  && pm2 startOrRestart ecosystem.json"
