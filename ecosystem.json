@@ -1,13 +1,6 @@
 {
     "apps": [
         {
-            "name": "koneksys-interview-development",
-            "script": "node ./dist/main.js",
-            "env": {
-                "NODE_ENV": "development"
-            }
-        },
-        {
             "name": "koneksys-interview",
             "script": "node ./dist/main.js"
         }
