@@ -28,6 +28,14 @@ pipelines:
             - npx eslint src
           caches:
             - node
+
+  custom:
+    stop_production: 
+        - step:
+            name: Stop api in production
+            script:
+              - npm run stop:production
+
   branches:
     development:
       - parallel:
@@ -73,6 +81,6 @@ pipelines:
               # See more security tools at https://bitbucket.org/product/features/pipelines/integrations?&category=security
               - pipe: atlassian/git-secrets-scan:0.5.1
         - step:
-            name: restart the aplication
+            name: deploy in production
             script:
               - npm run deploy:production
