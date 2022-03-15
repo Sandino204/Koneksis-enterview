@@ -30,11 +30,57 @@ pipelines:
             - node
 
   custom:
-    stop_production: 
+    stop_development:
+      - parallel:
         - step:
-            name: Stop api in production
+            trigger: manual
+            name: Installing pm2
             script:
-              - npm run stop:production
+              - npm install
+        - step: 
+            name: Enter on EC2
+            script:
+              - ssh -i Koneksys.pem ec2-user@54.147.128.163
+              - pm2 stop koneksys-interview-development
+
+    start_development:
+      - parallel:
+        - step:
+            trigger: manual
+            name: Installing pm2
+            script:
+              - npm install
+        - step: 
+            name: Enter on EC2
+            script:
+              - ssh -i Koneksys.pem ec2-user@54.147.128.163
+              - pm2 startOrRestart koneksys-interview-development
+
+    stop_production:
+      - parallel:
+        - step:
+            trigger: manual
+            name: Installing pm2
+            script:
+              - npm install
+        - step: 
+            name: Enter on EC2
+            script:
+              - ssh -i Koneksys.pem ec2-user@54.147.128.163
+              - pm2 startOrRestart koneksys-interview
+
+    start_production:
+      - parallel:
+        - step:
+            trigger: manual
+            name: Installing pm2
+            script:
+              - npm install
+        - step: 
+            name: Enter on EC2
+            script:
+              - ssh -i Koneksys.pem ec2-user@54.147.128.163
+              - pm2 start koneksys-interview
 
   branches:
     development:
