@@ -9,7 +9,7 @@
         "development": {
             "user": "ec2-user",
             "host": "172.31.26.96",
-            "key": "./ssh/KoneksysDevelopment.pem",
+            "key": "./Koneksys.pem",
             "ref": "origin/development",
             "repo": "https://github.com/Sandino204/Koneksis-enterview.git",
             "path": "/home/ubuntu/koneksys",
@@ -19,7 +19,7 @@
         "production": {
             "user": "ec2-user",
             "host": "172.31.26.96",
-            "key": "./ssh/Koneksys.pem",
+            "key": "./Koneksys.pem",
             "ref": "origin/main",
             "repo": "https://github.com/Sandino204/Koneksis-enterview.git",
             "path": "/home/ubuntu/koneksys",
