@@ -11,7 +11,7 @@
             "host": "ec2-54-147-128-163.compute-1.amazonaws.com",
             "key": "./Koneksys.pem",
             "ref": "origin/development",
-            "repo": "https://github.com/Sandino204/Koneksis-enterview.git",
+            "repo": "https://Sandino204:Caio123$5@github.com/Sandino204/Koneksis-enterview.git",
             "path": "/home/ec2-user",
             "post-deploy":
             "npm install && npm run build  && pm2 startOrRestart ecosystem.json"
@@ -21,7 +21,7 @@
             "host": "ec2-54-147-128-163.compute-1.amazonaws.com",
             "key": "./Koneksys.pem",
             "ref": "origin/main",
-            "repo": "https://github.com/Sandino204/Koneksis-enterview.git",
+            "repo": "https://Sandino204:Caio123$5@github.com/Sandino204/Koneksis-enterview.git",
             "path": "/home/ec2-user",
             "post-deploy":
             "npm install && npm run build  && pm2 startOrRestart ecosystem.json"
