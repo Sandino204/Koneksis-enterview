@@ -13,7 +13,7 @@
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "deploy:development": "pm2 deploy development stage setup && pm2 deploy development stage update",
-    "stop:development": "pm2 stop development",
+    "stop:development": "pm2 deploy development setup && pm2 deploy development stage stop",
     "deploy:production": "pm2 deploy production stage setup && pm2 deploy production stage update",
     "start:prod": "node dist/main",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
