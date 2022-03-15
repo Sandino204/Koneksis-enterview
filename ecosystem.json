@@ -8,7 +8,7 @@
     "deploy": {
         "development": {
             "user": "ec2-user",
-            "host": "172.31.26.96",
+            "host": "54.147.128.163",
             "key": "./Koneksys.pem",
             "ref": "origin/development",
             "repo": "https://github.com/Sandino204/Koneksis-enterview.git",
@@ -18,7 +18,7 @@
         },
         "production": {
             "user": "ec2-user",
-            "host": "172.31.26.96",
+            "host": "54.147.128.163",
             "key": "./Koneksys.pem",
             "ref": "origin/main",
             "repo": "https://github.com/Sandino204/Koneksis-enterview.git",
