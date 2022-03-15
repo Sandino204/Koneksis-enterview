@@ -1,7 +1,7 @@
 {
     "apps": [
         {
-            "name": "koneksys-enterview",
+            "name": "koneksys-interview",
             "script": "node ./dist/main.js"
         }
     ],

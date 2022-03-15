@@ -9,11 +9,11 @@ export class EquipmentRepository {
 
   constructor() {
     this.pool = new Pool({
-      database: process.env.PROD_DATABASE,
-      host: process.env.PROD_DATABASE_HOST,
-      port: Number(process.env.PROD_DATABASE_PORT),
-      user: process.env.PROD_DATABASE_USERNAME,
-      password: process.env.PROD_DATABASE_PASSWORD,
+      database: process.env.DATABASE,
+      host: process.env.DATABASE_HOST,
+      port: Number(process.env.DATABASE_PORT),
+      user: process.env.DATABASE_USERNAME,
+      password: process.env.DATABASE_PASSWORD,
     });
     this.pool.connect();
   }
