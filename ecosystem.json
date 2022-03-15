@@ -13,7 +13,7 @@
             "ref": "origin/development",
             "repo": "https://github.com/Sandino204/Koneksis-enterview.git",
             "path": "/home/ec2-user",
-            "pre-setup": "sudo apt-get install git ; ls -la",
+            "pre-deploy": "sudo apt-get install git",
             "post-deploy":
             "npm install && npm run build  && pm2 startOrRestart ecosystem.json"
         },
@@ -24,7 +24,7 @@
             "ref": "origin/main",
             "repo": "https://github.com/Sandino204/Koneksis-enterview.git",
             "path": "/home/ec2-user",
-            "pre-setup": "sudo apt-get install git ; ls -la",
+            "pre-deploy": "sudo apt-get install git",
             "post-deploy":
             "npm install && npm run build  && pm2 startOrRestart ecosystem.json"
         }
